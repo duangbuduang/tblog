@@ -76,8 +76,14 @@ WSGI_APPLICATION = 'tblog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tblog',
+        'HOST': '1.14.208.179',
+        'PORT': 3306,
+        'USER': 'tianxin',
+        'PASSWORD': 'Tianxin3.14',
+        'CHARSET': 'utf8',
+        'TIMEZONE': 'Asia/Chongqing',
     }
 }
 
