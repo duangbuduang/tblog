@@ -1,7 +1,9 @@
+import markdown
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.html import strip_tags
 
 
 class Category(models.Model):
@@ -61,8 +63,15 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         """重写父类方法save,每次保存前修改下修改时间"""
         self.modified_time = timezone.now()
+        # 实例化一个Markdown类，用于渲染body的文本
+        md = markdown.Markdown(extensions=[
+            'markdown.extensions.extra',
+            'markdown.extensions.codehilite',
+        ])
+        self.excerpt = strip_tags(md.convert(self.body))[:54]
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         """获取url"""
         return reverse('blog:detail', kwargs={'pk': self.pk})
+

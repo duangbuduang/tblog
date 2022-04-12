@@ -94,6 +94,15 @@
 					</div><!-- col-md-8 -->
 				</div>
 			</header>
+			{% if messages %}
+			    {% for message in messages %}
+			      <div class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+			        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+			                aria-hidden="true">&times;</span></button>
+			        {{ message }}
+			      </div>
+			    {% endfor %}
+			{% endif %}
 		</div>
 		<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">网页模板</a></div>
 		<div class="copyrights">Modified by <a href="http://zmrenwu.com/">追梦人物的博客</a></div>
@@ -108,74 +117,11 @@
 					<aside class="col-md-4">
 						{% block toc %}
 						{% endblock toc %}
+
 						{% show_recent_posts %}
-
-
-						<div class="widget widget-archives">
-							<h3 class="widget-title">归档</h3>
-							<ul>
-								<li>
-									<a href="#">2017 年 5 月</a>
-								</li>
-								<li>
-									<a href="#">2017 年 4 月</a>
-								</li>
-								<li>
-									<a href="#">2017 年 3 月</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="widget widget-category">
-							<h3 class="widget-title">分类</h3>
-							<ul>
-								<li>
-									<a href="#">Django 博客教程 <span class="post-count">(13)</span></a>
-								</li>
-								<li>
-									<a href="#">Python 教程 <span class="post-count">(11)</span></a>
-								</li>
-								<li>
-									<a href="#">Django 用户认证 <span class="post-count">(8)</span></a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="widget widget-tag-cloud">
-							<h3 class="widget-title">标签云</h3>
-							<ul>
-								<li>
-									<a href="#">Django</a>
-								</li>
-								<li>
-									<a href="#">Python</a>
-								</li>
-								<li>
-									<a href="#">Java</a>
-								</li>
-								<li>
-									<a href="#">笔记</a>
-								</li>
-								<li>
-									<a href="#">文档</a>
-								</li>
-								<li>
-									<a href="#">AngularJS</a>
-								</li>
-								<li>
-									<a href="#">CSS</a>
-								</li>
-								<li>
-									<a href="#">JavaScript</a>
-								</li>
-								<li>
-									<a href="#">Snippet</a>
-								</li>
-								<li>
-									<a href="#">jQuery</a>
-								</li>
-							</ul>
-						</div>
+						{% show_archives %}
+						{% show_categories %}
+						{% show_tags %}
 						<div class="rss">
 							<a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
 						</div>
