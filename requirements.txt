@@ -1,7 +1,7 @@
 Django==2.2.12
 importlib-metadata==4.8.3
 Markdown==3.3.6
-mysqlclient
+
 pytz==2022.1
 sqlparse==0.4.2
 typing-extensions==4.1.1
