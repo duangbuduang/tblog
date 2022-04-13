@@ -12,7 +12,7 @@
                             <span class="post-date"><a href="#"><time class="entry-date"
                                                                       datetime="2012-11-09T23:15:57+00:00">{{ post.created_time }}</time></a></span>
                             <span class="post-author"><a href="#">{{ post.author }}</a></span>
-                            <span class="comments-link"><a href="#">4 评论</a></span>
+                            <span class="comments-link"><a href="{{ post.get_absolute_url }}#comment-area">{{ post.comment_set.count }} 评论</a></span>
                             <span class="views-count"><a href="#">588 阅读</a></span>
                         </div>
                     </header>
@@ -23,6 +23,7 @@
                         </div>
                     </div>
                 </article>
+				<hr>
 				{% empty %}
 				<div class="no-post">哎呦，暂时还没有发布的文章！</div>
 				{% endfor %}

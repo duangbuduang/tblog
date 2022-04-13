@@ -59,6 +59,7 @@ class Post(models.Model):
     class Meta:
         verbose_name = '文章'
         verbose_name_plural = verbose_name
+        ordering = ['-created_time']  # 指定排序方式
 
     def save(self, *args, **kwargs):
         """重写父类方法save,每次保存前修改下修改时间"""

@@ -25,7 +25,7 @@ SECRET_KEY = 'o-77=+hkwm*(f5d$=&lri*_6dq0c&*+1v5w&9w8+9s3nync&i3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.tianxin.website']
 
 
 # Application definition
@@ -127,3 +127,4 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
