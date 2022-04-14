@@ -25,7 +25,7 @@ SECRET_KEY = 'o-77=+hkwm*(f5d$=&lri*_6dq0c&*+1v5w&9w8+9s3nync&i3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.tianxin.website']
+ALLOWED_HOSTS = ['1.14.208.179', 'localhost ', '.tianxin.website']
 
 
 # Application definition
