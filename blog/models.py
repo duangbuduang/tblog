@@ -52,6 +52,7 @@ class Post(models.Model):
     # 文章作者 这里 User 是从 django.contrib.auth.models 导入的
     # django.contrib.auth是django内置的应用，专门用于处理网站用户的注册、登录等流程，User是django为我们已经写好的用户模型
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    views = models.PositiveIntegerField(default=0, editable=False)
 
     def __str__(self):
         return self.title
@@ -76,3 +77,7 @@ class Post(models.Model):
         """获取url"""
         return reverse('blog:detail', kwargs={'pk': self.pk})
 
+    def increase_views(self):
+        """更新阅读量"""
+        self.views += 1
+        self.save(update_fields=['views'])
