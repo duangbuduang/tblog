@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		body {
+			background: linear-gradient(to right, #4264d3, #bfe6ba);
+		}
+
+		/* 		#container {
+			width: 520px;
+			height: 520px;
+			margin: auto;
+			position: absolute;
+			top: 250px;
+			bottom: 250px;
+			left: 250px;
+			right: 250px;
+			text-align: center;
+		} */
+		#container {
+			width: 520px;
+			height: 520px;
+			text-align: center;
+			position: absolute;
+			left: 49%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			/* 			border: 1px solid #000000; */
+		}
+
+		#container img {
+			width: 150px;
+			border-radius: 75px;
+			border: 2px solid darkgoldenrod;
+			margin-left: 60px;
+		}
+
+		#container h1 {
+			margin-left: 80px;
+			text-align: left;
+			text-indent: 30px;
+			line-height: 50px;
+			font-size: 40px;
+			font-weight: bolder;
+			position: relative;
+			background: linear-gradient(to right, #000000, #0055ff);
+			/* background-image: -webkit-linear-gradient(bottom, red, #fd8403, yellow); */
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+		}
+
+		.input input {
+			margin: 20px auto;
+			width: 240px;
+			height: 30px;
+			border: 2px solid black;
+			border-radius: 6px;
+		}
+
+		.button {
+			right: 100px;
+			width: 255px;
+			position: absolute;
+		}
+
+		.button input:nth-child(1) {
+			width: 80px;
+			height: 30px;
+			background-color: dodgerblue;
+			float: left;
+			text-align: center;
+			color: #F0F8FF;
+			border: none;
+			border-radius: 6px;
+			box-shadow: 3px 3px 3px #0055ff ;
+		}
+
+		.button input:nth-child(2) {
+			width: 80px;
+			height: 30px;
+			background-color: azure;
+			float: right;
+			text-align: center;
+			color: #000000;
+			border: none;
+			border-radius: 6px;
+			box-shadow: 3px 3px 3px #000000 ;
+		}
+/* 		.button input:nth-child(2) {
+			width: 80px;
+			height: 30px;
+			background-color: darkgray;
+			float: right;
+			border: none;
+			border-radius: 6px;
+			margin-right: 0;
+		} */
+	</style>
+	<body>
+		<div id='container'>
+			<form action="" method="post">
+				<h1>嗨，欢迎你的访问！</h1>
+				<img src="{% static 'blog/images/hulk.jpg' %}">
+				<div class="input">
+					<label>用户名：</label>
+					<input type="text" name="username" />
+				</div>
+				<div class="input">
+					<label>密&nbsp;&nbsp;码：</label>
+					<input type="password" name="password" />
+				</div>
+			</form>
+			<div class="button">
+				<input type="button" name="" id="btn1" value="登录" />
+				<input type="button" name="" id="btn2" value="清空" />
+			</div>
+		</div>
+	</body>
+</html>
