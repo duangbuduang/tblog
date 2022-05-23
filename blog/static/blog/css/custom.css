@@ -61,6 +61,10 @@ a:hover, a:focus {
 body {
     color: #444;
     font-family: 'Lato', sans-serif;
+	background-image: url(../images/room.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/* background: linear-gradient(to right, #4264d3, #bfe6ba); */
 }
 
 p {
@@ -104,7 +108,7 @@ img {
  */
 
 #site-header {
-    background-color: #FFF;
+    background-color: rgba(128, 165, 40, 0.5);
     padding: 25px 20px;
     margin-bottom: 40px;
     border-bottom: 1px solid #e7e7e7;
@@ -214,7 +218,7 @@ img {
 }
 
 .post {
-    background: #fff;
+    background: rgba(28,28,28,0.2);
     padding: 30px 30px 0;
 }
 
