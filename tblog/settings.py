@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o-77=+hkwm*(f5d$=&lri*_6dq0c&*+1v5w&9w8+9s3nync&i3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['127.0.0.1', '1.14.208.179', 'localhost ', '.tianxin.website']
 
@@ -127,6 +127,7 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
+
 # 收集静态资源
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
